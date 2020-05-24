@@ -1,0 +1,11 @@
+@import "variables";
+@import "responsive";
+
+html {
+    background-color: $primaryColor;
+
+    p {
+        color: white;
+        transition: all 0.5s;
+    }
+}
