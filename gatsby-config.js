@@ -4,6 +4,14 @@ const siteMetadata = require('./config/metadata');
 module.exports = {
   siteMetadata,
   plugins: [
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Droid Sans', 'Droid Serif', 'Sans Serif', 'Roboto', 'Roboto Black']
+        }
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -29,8 +37,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
-        color: `red`,
+        color: `#00C59D`,
         showSpinner: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        outputStyle: `compressed`,
+        browserslist: `last 6 version`,
       },
     },
     `gatsby-plugin-sitemap`,
